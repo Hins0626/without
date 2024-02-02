@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="WithoutMed,without medication,non-drug remedies,discomfort relievers,relieve symptoms,external treatment,natural therapy,traditional medicine,symptom relief hacks">
+    <meta name="description" content="We have gathered some effective external treatment methods to help alleviate various common symptoms without medication. These methods are derived from the proven experiences of doctors or ordinary individuals.">
+    <title>WithoutMed - Discover Natural Health Solutions</title>
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        header {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1, h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        @font-face{
+  font-family: "Merriweather";
+  src:url('font/Merriweather/Merriweather-Regular.ttf') format("truetype");
+}
+    </style>
+</head>
+
+<body>
+    <header id="main-header">
+        <h1>WithoutMed</h1>
+        <h2>Discover Natural Health Solutions</h2>
+        
+    </header>
+
+    
+
+    <main>
+        <div class="content">
+            <button onclick="goToArticlePage()" style="font-family: 'Merriweather'">Explore Tips</button>
+        </div>
+    </main>
+
+    <script>
+        function goToArticlePage() {
+            const backgroundImage = getComputedStyle(document.body).backgroundImage;
+            // 将背景图片信息存储在 localStorage 中
+            localStorage.setItem('bgImage', backgroundImage);
+            // 跳转到 article.html 页面
+            window.location.href = 'index2.html';
+        }
+    </script>
+</body>
+<script>
+        const imageBaseUrl = 'https://img2.imgtp.com/2024/01/24/';
+        const imageNames = ['s6jxBjtM.jpg', 'EtogO3iN.jpg', 'hNU860Pt.jpg', 'jSdq3hMw.jpg', '0nbOwo4D.jpg', 'pAYN1oHk.jpg'];
+
+        function getRandomImage() {
+            const randomNumber = Math.floor(Math.random() * imageNames.length);
+            return imageNames[randomNumber];
+        }
+
+        function applyTextStyles(imageName) {
+            const h1 = document.querySelector('h1');
+            const h2 = document.querySelector('h2');
+
+            // 根据图片名称调整字体颜色
+            if (imageName === 's6jxBjtM.jpg' || imageName === 'EtogO3iN.jpg' || imageName === 'pAYN1oHk.jpg') {
+                h1.style.color = h2.style.color = '#000'; // 深色字体
+            } else {
+                h1.style.color = h2.style.color = '#fff'; // 浅色字体
+            }
+        }
+
+        window.onload = function () {
+            const randomBackground = getRandomImage();
+            const imageUrl = `url('${imageBaseUrl}${randomBackground}')`;
+            document.body.style.background = imageUrl;
+            document.body.style.backgroundSize = 'cover';
+
+            // 应用字体样式
+            applyTextStyles(randomBackground);
+        };
+
+        window.onresize = function () {
+            const randomBackground = getRandomImage();
+            const imageUrl = `url('${imageBaseUrl}${randomBackground}')`;
+            document.body.style.background = imageUrl;
+            document.body.style.backgroundSize = 'cover';
+
+            // 应用字体样式
+            applyTextStyles(randomBackground);
+        };
+    </script>
+</html>
