@@ -83,9 +83,9 @@
     <script>
         function goToArticlePage() {
             const backgroundImage = getComputedStyle(document.body).backgroundImage;
-            // 将背景图片信息存储在 localStorage 中
+            
             localStorage.setItem('bgImage', backgroundImage);
-            // 跳转到 article.html 页面
+           
             window.location.href = 'index2.html';
         }
     </script>
@@ -103,11 +103,11 @@
             const h1 = document.querySelector('h1');
             const h2 = document.querySelector('h2');
 
-            // 根据图片名称调整字体颜色
+            
             if (imageName === 's6jxBjtM.jpg' || imageName === 'EtogO3iN.jpg' || imageName === 'pAYN1oHk.jpg') {
-                h1.style.color = h2.style.color = '#000'; // 深色字体
+                h1.style.color = h2.style.color = '#000'; 
             } else {
-                h1.style.color = h2.style.color = '#fff'; // 浅色字体
+                h1.style.color = h2.style.color = '#fff'; 
             }
         }
 
@@ -117,7 +117,7 @@
             document.body.style.background = imageUrl;
             document.body.style.backgroundSize = 'cover';
 
-            // 应用字体样式
+            
             applyTextStyles(randomBackground);
         };
 
@@ -127,7 +127,7 @@
             document.body.style.background = imageUrl;
             document.body.style.backgroundSize = 'cover';
 
-            // 应用字体样式
+            
             applyTextStyles(randomBackground);
         };
     </script>
